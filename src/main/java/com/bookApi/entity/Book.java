@@ -14,8 +14,10 @@ public class Book {
 	protected String title;
 	protected float price;
 	protected String edition;
+	
 	protected boolean highlights;
 	protected boolean active;
+	
 	@ManyToOne
 	protected Author author;
 	@ManyToOne
