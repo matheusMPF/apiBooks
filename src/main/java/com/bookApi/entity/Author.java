@@ -13,8 +13,6 @@ public class Author {
 	@Id
 	protected String cpf;
 	protected String name;
-	@OneToOne
-	protected Address address;
 	protected boolean active;
 	@OneToMany
 	protected List<Book> books;
@@ -25,11 +23,10 @@ public class Author {
 	}
 
 	//Composite constructor
-	public Author(String cpf, String name, Address address, boolean active) {
+	public Author(String cpf, String name, boolean active) {
 		super();
 		this.cpf = cpf;
 		this.name = name;
-		this.address = address;
 		this.active = active;
 	}
 	
@@ -56,14 +53,6 @@ public class Author {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
 	}
 
 	public boolean isActivate() {

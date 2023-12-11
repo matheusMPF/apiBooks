@@ -15,8 +15,6 @@ public class BookPublisher {
 	@Id
 	protected String isbn;
 	protected String name;
-	@OneToOne
-	protected Address address;
 	protected boolean activate;
 	@OneToMany
 	protected List<Book> books;
@@ -27,11 +25,10 @@ public class BookPublisher {
 	}
 
 	//Composite Constructor
-	public BookPublisher(String isbn, String name, Address address, boolean activate) {
+	public BookPublisher(String isbn, String name, boolean activate) {
 		super();
 		this.isbn = isbn;
 		this.name = name;
-		this.address = address;
 		this.activate = activate;
 	}
 	
@@ -57,14 +54,6 @@ public class BookPublisher {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
 	}
 
 	public boolean isActivate() {
