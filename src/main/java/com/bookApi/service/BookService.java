@@ -17,8 +17,8 @@ public class BookService {
 	BookRepository bookRepository;
 	
 	//Method for register a new book
-	public void registerBook(Book book ) {
-		bookRepository.save(book);
+	public Book registerBook(Book book ) {
+		return bookRepository.save(book);
 	}
 	
 	//Method for listing registered books

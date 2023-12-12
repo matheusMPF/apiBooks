@@ -17,6 +17,7 @@ public class Book {
 	
 	protected boolean highlights;
 	protected boolean active;
+	private String image;
 	
 	@ManyToOne
 	protected Author author;
@@ -61,6 +62,13 @@ public class Book {
 
 	public float getPrice() {
 		return price;
+	}
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	public void setPrice(float price) {
